@@ -1,0 +1,9 @@
+project: savantenvs/ufbx
+target: fuzz_cache_mcx
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_cache_mcx/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_cache_mcx
+    libfuzzer: true
+    timeout: 5
